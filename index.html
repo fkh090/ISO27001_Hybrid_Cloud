@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO 27001 Controls for Hybrid Cloud Infrastructure</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles for a modern look and feel */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* A light gray background */
+        }
+        
+        /* Style for the accordion (details/summary) arrow */
+        summary::marker {
+            content: '';
+        }
+        
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] summary .arrow-down {
+            transform: rotate(180deg);
+        }
+
+        .arrow-down {
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        /* Gradient header background */
+        .header-gradient {
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+        }
+
+        /* Card styles */
+        .control-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        
+        .control-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="header-gradient text-white p-8 md:p-12 text-center rounded-b-3xl shadow-lg">
+        <h1 class="text-3xl md:text-5xl font-bold mb-2">ISO 27001 for Hybrid Cloud</h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto">A comprehensive guide to essential controls for organizations migrating to a hybrid cloud infrastructure while maintaining ISO 27001 certification.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 md:p-8">
+
+        <!-- Explanation Section -->
+        <section class="control-card p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Navigating the Shift to Hybrid Cloud</h2>
+            <div class="space-y-4 text-gray-700">
+                <p>Migrating to a hybrid cloud infrastructure is a significant strategic move for any ISO 27001 certified organization. It introduces a new operational paradigm where security responsibilities are shared between your organization and the cloud service provider (CSP). This is known as the <strong>Shared Responsibility Model</strong>.</p>
+                <p>Under this model, the CSP is typically responsible for the security *of* the cloud (i.e., the physical data centers, hardware, and the core network), while you, the customer, are responsible for security *in* the cloud (i.e., your data, applications, access management, and network configurations).</p>
+                <p>Therefore, your existing Information Security Management System (ISMS) and your <strong>Statement of Applicability (SoA)</strong> must be thoroughly reviewed and updated to reflect this new distribution of control ownership. The following sections highlight the key Annex A controls that require careful consideration in a hybrid environment.</p>
+            </div>
+        </section>
+        
+        <!-- Grid for Control Categories -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- Organizational Controls Card -->
+            <section class="control-card p-6">
+                <div class="flex items-center mb-4">
+                    <!-- Icon for Organizational Controls -->
+                    <div class="bg-blue-100 text-blue-600 p-3 rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800">Organizational Controls</h2>
+                </div>
+                <div class="space-y-2">
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">5.1 Policies for information security</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Update policies to address cloud usage, data classification for the cloud, and shared responsibilities.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">5.2 Roles & Responsibilities</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Clearly define who manages, secures, and monitors the on-premises and cloud environments.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">5.7 Threat intelligence</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Collect and analyze threat intelligence for both your on-premises systems and the specific cloud services you use.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">5.9 Inventory of information</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Extend your asset inventory to include cloud resources, data, and their owners.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">5.14 Information transfer</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Establish secure transfer rules for moving data between on-premises and cloud environments.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">5.23 Use of cloud services</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Establish processes for acquiring, using, managing, and exiting cloud services in line with security requirements.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">5.24 Incident management</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Update incident management plans to include the hybrid environment and define response procedures.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">5.30 ICT readiness for BCP</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Update and test business continuity plans for the hybrid model to ensure service restoration.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">5.31 Legal & regulatory</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Identify and document legal requirements applicable to data in the cloud, such as data sovereignty.</p></div></details>
+                </div>
+            </section>
+
+            <!-- People Controls Card -->
+            <section class="control-card p-6">
+                <div class="flex items-center mb-4">
+                    <div class="bg-green-100 text-green-600 p-3 rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800">People Controls</h2>
+                </div>
+                <div class="space-y-2">
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">6.3 Awareness training</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Train all personnel on updated security policies for the hybrid environment and cloud-specific risks.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">6.7 Remote working</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Implement robust security measures to protect information accessed from outside the organization's premises.</p></div></details>
+                </div>
+            </section>
+
+            <!-- Physical Controls Card -->
+            <section class="control-card p-6">
+                <div class="flex items-center mb-4">
+                    <div class="bg-yellow-100 text-yellow-600 p-3 rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800">Physical Controls</h2>
+                </div>
+                 <div class="space-y-2">
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">7.1 Physical perimeters</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Maintain responsibility for the physical security of your on-premises infrastructure.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">7.8 Equipment siting</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">On-premises equipment connecting to the cloud must be securely sited and protected.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">7.11 Supporting utilities</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Protect on-premises facilities from power failures and other utility disruptions.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">7.12 Cabling security</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Secure physical cabling for dedicated connections to the cloud to prevent interception or damage.</p></div></details>
+                </div>
+            </section>
+
+            <!-- Technological Controls Card -->
+            <section class="control-card p-6">
+                <div class="flex items-center mb-4">
+                    <div class="bg-red-100 text-red-600 p-3 rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800">Technological Controls</h2>
+                </div>
+                 <div class="space-y-2">
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">8.1 User endpoint devices</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Protect information on all user devices (laptops, phones) that can access the hybrid environment.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">8.5 Secure authentication</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Implement strong authentication (e.g., MFA) for accessing both on-premises and cloud resources.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">8.9 Configuration management</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Establish and maintain secure configurations for all hardware, software, and services in the hybrid environment.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">8.12 Data leakage prevention</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Apply measures to systems and networks to prevent sensitive data leakage from any part of the hybrid environment.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">8.13 Information backup</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Adapt backup policies to ensure data in both on-premises and cloud locations can be restored.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">8.16 Monitoring activities</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Continuously monitor networks and systems across the entire hybrid environment for anomalous behavior.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">8.21 Security of network services</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Identify, implement, and monitor security for all network services, including connections to the cloud.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">8.22 Segregation of networks</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Use VPCs, subnets, and firewalls to isolate sensitive systems and control traffic flow in the hybrid network.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">8.24 Use of cryptography</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Define and implement rules for using cryptography to protect data at rest and in transit, with robust key management.</p></div></details>
+                    <details class="group"><summary class="flex justify-between items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100"><span class="font-semibold text-gray-700">8.32 Change management</span><svg class="w-6 h-6 text-gray-500 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-4 bg-white border border-t-0 rounded-b-lg"><p class="text-gray-600">Apply formal change management procedures to all changes across the entire hybrid infrastructure.</p></div></details>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="text-center p-6 mt-8">
+        <p class="text-gray-500">This presentation is a comprehensive guide and should be adapted to your organization's specific context and risk assessment results.</p>
+    </footer>
+
+</body>
+</html>
